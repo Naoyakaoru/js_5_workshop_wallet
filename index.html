@@ -12,6 +12,9 @@ tr .remove{
 tr:hover .remove {
   visibility: visible;
 }
+.remove:hover {
+  cursor: pointer;
+}
   </style>
 </head>
 <body>
@@ -91,20 +94,20 @@ tr:hover .remove {
             </tr>
           </thead>
           <tbody id="records-panel">
-            <!-- <tr class="item"> -->
-            <!--   <th scope="row">2020&#45;08&#45;09</th> -->
-            <!--   <td>食</td> -->
-            <!--   <td>漢堡王</td> -->
-            <!--   <td>150</td> -->
-            <!--   <td><span class="remove">x</span></td> -->
-            <!-- </tr> -->
-            <!-- <tr> -->
-            <!--   <th scope="row">2020&#45;08&#45;09</th> -->
-            <!--   <td>衣</td> -->
-            <!--   <td>uniqlo</td> -->
-            <!--   <td>1350</td> -->
-            <!--   <td><span class="remove">x</span></td> -->
-            <!-- </tr> -->
+            <tr class="item">
+              <th scope="row">2020&#45;08&#45;09</th>
+              <td>食</td>
+              <td>漢堡王</td>
+              <td>150</td>
+              <td><span class="remove">x</span></td>
+            </tr>
+            <tr>
+              <th scope="row">2020&#45;08&#45;09</th>
+              <td>衣</td>
+              <td>uniqlo</td>
+              <td>1350</td>
+              <td><span class="remove">x</span></td>
+            </tr>
             <!-- <tr> -->
             <!--   <th scope="row">2020&#45;08&#45;09</th> -->
             <!--   <td>住</td> -->
@@ -128,6 +131,13 @@ tr:hover .remove {
   <script src="index.js"></script>
   <script src="search.js"></script>
   <script src="init.js"></script>
+  <template id="record">
+      <th scope="row" class="display-date"></th>
+      <td class="display-category"></td>
+      <td class="display-description"></td>
+      <td class="display-amount"></td>
+      <td><span class="remove">x</span></td>
+  </template>
 </body>
 
 </html>
