@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     dDesc.textContent = acc.description
     dAmount.textContent = acc.amount
 
-    recordsPanel.appendChild(newRecord)
+    recordsPanel.insertAdjacentElement('afterbegin', newRecord)
   });
   //用records印出所有end
 
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     dDesc.textContent = formData.description
     dAmount.textContent = formData.amount
 
-    recordsPanel.appendChild(newRecord)
+    recordsPanel.insertAdjacentElement('afterbegin', newRecord)
     //------------新增一筆end
     console.log(newRecord)
   })
