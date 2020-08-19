@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (records === null) {
     records = []
   }
+  //用records印出所有start
   records.forEach(acc => {
     let newRecord = document.createElement('tr')
     newRecord.innerHTML = recordTemplate.innerHTML
@@ -22,8 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     recordsPanel.appendChild(newRecord)
   });
-  //用records印出所有
-
+  //用records印出所有end
 
   inputForm.addEventListener('submit',function(e) {
     e.preventDefault()
