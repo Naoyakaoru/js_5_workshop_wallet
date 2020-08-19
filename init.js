@@ -19,10 +19,11 @@ function getFormData() {
     description: description.value
   }
   console.log((formData))
-  category.value = '食'
-  date.value = ''
-  amount.value = ''
-  description.value = ''
+  inputForm.reset()
+  // category.value = '食'
+  // date.value = ''
+  // amount.value = ''
+  // description.value = ''
 }
 
 // function initData(){
