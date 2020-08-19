@@ -13,10 +13,10 @@ function getFormData() {
   let description = inputForm.elements["description"]
 
   let formData = {
-    category: category.value,
     date: date.value,
-    amount: amountInt,
-    description: description.value
+    category: category.value,
+    description: description.value,
+    amount: amountInt
   }
   console.log((formData))
   inputForm.reset()
