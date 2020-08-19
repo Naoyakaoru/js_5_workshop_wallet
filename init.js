@@ -6,19 +6,23 @@ inputForm.addEventListener('submit',function(e) {
 })
 
 function getFormData() {
-  let category = inputForm.elements["category"].value
-  let date = inputForm.elements["date"].value
-  let amount = parseInt(inputForm.elements["amount"].value, 10)
-  console.log(amount)
-  let description = inputForm.elements["description"].value
+  let category = inputForm.elements["category"]
+  let date = inputForm.elements["date"]
+  let amount = inputForm.elements["amount"]
+  let amountInt = parseInt(amount.value, 10)
+  let description = inputForm.elements["description"]
 
   let formData = {
-    category: category,
-    date: date,
-    amount: amount,
-    description: description
+    category: category.value,
+    date: date.value,
+    amount: amountInt,
+    description: description.value
   }
   console.log((formData))
+  category.value = '食'
+  date.value = ''
+  amount.value = ''
+  description.value = ''
 }
 
 // function initData(){
