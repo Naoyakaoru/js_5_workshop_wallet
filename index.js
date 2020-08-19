@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const inputForm = document.forms['item-form']
   const recordTemplate = document.querySelector('template#record')
   const recordsPanel = document.querySelector('#records-panel')
-  let records = JSON.parse(localStorage.getItem('records')) //records to obj
+  var records = JSON.parse(localStorage.getItem('records')) //records to obj
   if (records === null) {
     records = []
   }
