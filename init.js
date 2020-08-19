@@ -1,11 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
   const inputForm = document.forms['item-form']
-  let records = []
-  
+  let records = JSON.parse(localStorage.getItem('records')) //records to obj
+  if (records === null) {
+    records = []
+  }
+
   inputForm.addEventListener('submit',function(e) {
     e.preventDefault()
     records.push(getFormData())
-    localStorage.setItem('records', JSON.stringify(records))
+    localStorage.setItem('records', JSON.stringify(records)) //obj to string
     console.log(localStorage.getItem('records'))
     inputForm.reset()
   })
